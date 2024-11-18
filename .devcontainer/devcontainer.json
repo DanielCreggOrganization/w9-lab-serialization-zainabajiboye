@@ -1,0 +1,17 @@
+{
+  "name": "Java",
+  "image": "mcr.microsoft.com/devcontainers/java:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-dependency",
+        "visualstudioexptteam.vscodeintellicode",
+        "github.copilot@prerelease",
+        "github.copilot-chat@prerelease"
+      ]
+    }
+  },
+  "postStartCommand": "code -g ./src/ie/atu/testpackage/HelloWorld.java"
+}

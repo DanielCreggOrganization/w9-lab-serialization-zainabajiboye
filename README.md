@@ -344,13 +344,15 @@ public class UserProfile implements Serializable {
                            username, password, loginAttempts, email);
     }
 }
+```
 
-// File: UserProfileSerializer.java
+```java
+// File: Main.java
 package ie.atu.serialization.demo;
 
 import java.io.*;
 
-public class UserProfileSerializer {
+public class Main {
     public static void main(String[] args) {
         UserProfile user = new UserProfile("johndoe", "secret123", "john@example.com");
         System.out.println("Original User: " + user);
@@ -469,15 +471,17 @@ public class Product implements Serializable {
         return "Product{name='" + name + "', price=" + price + "}";
     }
 }
+```
 
-// File: ProductCatalog.java
+```java
+// File: Main.java
 package ie.atu.serialization.demo;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductCatalog {
+public class Main {
     public static void main(String[] args) {
         // Version 1: Create and serialize products
         List<Product> products = new ArrayList<>();
@@ -516,7 +520,9 @@ public class ProductCatalog {
         }
     }
 }
+```
 
+```java
 // File: Product.java - Version 2 (with new field)
 public class Product implements Serializable {
     private static final long serialVersionUID = 2L; // Changed version
@@ -576,11 +582,6 @@ Create a game save system that handles version compatibility:
    - achievements (List<String>)
    - serialVersionUID = 2L
 
-4. Implement a compatibility layer that can:
-   - Load old saves
-   - Convert them to the new format
-   - Save in the new format
-
 <details>
 <summary>Click to see expected output</summary>
 
@@ -588,19 +589,6 @@ Create a game save system that handles version compatibility:
 Creating Version 1 save:
 GameSave{playerName='Player1', score=1000, level=5}
 Save file created successfully
-
-Updating to Version 2...
-Loading old save with compatibility layer...
-Converting to new format...
-GameSave{playerName='Player1', score=1000, level=5, playTime=0, achievements=[]}
-
-Creating new Version 2 save:
-GameSave{playerName='Player2', score=2000, level=8, playTime=3600, achievements=[Boss1, Boss2]}
-New save file created successfully
-
-Loading both saves:
-Version 1 (converted): GameSave{playerName='Player1', score=1000, level=5, playTime=0, achievements=[]}
-Version 2 (native): GameSave{playerName='Player2', score=2000, level=8, playTime=3600, achievements=[Boss1, Boss2]}
 ```
 </details>
 
@@ -685,9 +673,11 @@ public class SecureProduct implements Serializable {
                ", secretKey='" + secretKey + "'}";
     }
 }
+```
 
+```java
 // Usage demonstration
-public class BestPracticesDemo {
+public class Main {
     public static void main(String[] args) {
         try {
             // Create product with validation
@@ -755,13 +745,6 @@ Create a secure banking system that implements all best practices:
    - Logging
    - Version control
 
-3. Create a test suite that verifies:
-   - Data integrity after serialization
-   - Proper handling of invalid input
-   - Security of sensitive data
-   - Version compatibility
-   - Resource cleanup
-
 <details>
 <summary>Click to see expected output</summary>
 
@@ -783,16 +766,6 @@ Account loaded successfully
 Validation passed
 Security checks passed
 BankAccount{id='AC001', holder='John Doe', balance=1300.0}
-
-Testing security...
-Attempt to create invalid account - Caught: Account holder name cannot be empty
-Attempt to withdraw negative amount - Caught: Amount must be positive
-Attempt to deserialize tampered data - Caught: Security validation failed
-
-Testing version compatibility...
-Version 1 account loaded and upgraded successfully
-New fields initialized with default values
-All tests passed successfully
 ```
 </details>
 

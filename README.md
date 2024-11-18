@@ -47,6 +47,7 @@ public class Main {
 ```
 
 5. Run this code to make sure everything is working as expected.
+6. Create a ``resources`` folder at the same level as the src folder. It will be used later to store serialized data. 
 
 <details>
 <summary>Click to reveal expected output</summary>

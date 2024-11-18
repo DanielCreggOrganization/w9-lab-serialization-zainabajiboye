@@ -199,14 +199,14 @@ graph TD
 ### 3.2 Code Example: List Serialization
 
 ```java
-// File: LibraryCatalog.java
+// File: Main.java
 package ie.atu.serialization.demo;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LibraryCatalog {
+public class Main {
     public static void main(String[] args) {
         List<Book> books = new ArrayList<>();
         books.add(new Book("The Hobbit", "J.R.R. Tolkien", 19.99));
@@ -273,7 +273,7 @@ Book{title='Pride and Prejudice', author='Jane Austen', price=12.99}
 
 Create a movie catalog system that can serialize and deserialize a list of movies:
 
-1. Create a MovieCatalog class with methods to:
+1. In the main method:
    - Add movies to a catalog
    - Save the catalog to a file
    - Load the catalog from a file

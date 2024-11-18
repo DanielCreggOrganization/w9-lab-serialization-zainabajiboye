@@ -275,17 +275,12 @@ Book{title='Pride and Prejudice', author='Jane Austen', price=12.99}
 Create a movie catalog system that can serialize and deserialize a list of movies:
 
 1. In the main method:
-   - Add movies to a catalog
-   - Save the catalog to a file
-   - Load the catalog from a file
+   - Add movies to a catalog ArrayList
+   - Serialize the catalog to a file
+   - Deserialize the catalog from a file
    - Display all movies
 
-2. Add methods to:
-   - Search movies by director
-   - Filter movies by year range
-   - Sort movies by rating
-
-3. Test with at least 5 different movies
+2. Test with at least 5 different movies
 
 <details>
 <summary>Click to see expected output</summary>
@@ -300,22 +295,6 @@ Movie{title='Interstellar', director='Christopher Nolan', year=2014, rating=8.6}
 
 Catalog has been serialized
 Catalog has been deserialized
-
-Movies by Christopher Nolan:
-Movie{title='Inception', director='Christopher Nolan', year=2010, rating=8.8}
-Movie{title='The Dark Knight', director='Christopher Nolan', year=2008, rating=9.0}
-Movie{title='Interstellar', director='Christopher Nolan', year=2014, rating=8.6}
-
-Movies between 2000-2010:
-Movie{title='Inception', director='Christopher Nolan', year=2010, rating=8.8}
-Movie{title='The Dark Knight', director='Christopher Nolan', year=2008, rating=9.0}
-
-Movies sorted by rating:
-Movie{title='The Dark Knight', director='Christopher Nolan', year=2008, rating=9.0}
-Movie{title='Pulp Fiction', director='Quentin Tarantino', year=1994, rating=8.9}
-Movie{title='Inception', director='Christopher Nolan', year=2010, rating=8.8}
-Movie{title='The Matrix', director='Wachowskis', year=1999, rating=8.7}
-Movie{title='Interstellar', director='Christopher Nolan', year=2014, rating=8.6}
 ```
 </details>
 

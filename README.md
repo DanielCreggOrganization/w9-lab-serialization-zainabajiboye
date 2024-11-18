@@ -24,10 +24,11 @@ The project structure also helps manage resources efficiently, particularly when
 ```mermaid
 graph TD
     A[Java Project] --> B[src]
-    B --> C[domain]
-    B --> D[util]
-    C --> E[serializable classes]
-    D --> F[serialization helpers]
+    A --> C[resources]
+    B --> D[packages]
+    D --> E[classes]
+    C --> F[data files]
+    C --> G[images]
 ```
 
 ### 1.2 DIY Task 1: Create Project Structure

@@ -30,63 +30,10 @@ graph TD
     D --> F[serialization helpers]
 ```
 
-### 1.2 Code Example: Basic Project Setup
-
-Here's an example of setting up a basic serialization project:
-
-```java
-// File: BookStore.java
-package ie.atu.serialization.demo;
-
-import java.io.Serializable;
-
-public class BookStore implements Serializable {
-    private String name;
-    private String location;
-    
-    public BookStore(String name, String location) {
-        this.name = name;
-        this.location = location;
-    }
-    
-    @Override
-    public String toString() {
-        return "BookStore{name='" + name + "', location='" + location + "'}";
-    }
-}
-
-// File: SerializationDemo.java
-package ie.atu.serialization.demo;
-
-public class SerializationDemo {
-    public static void main(String[] args) {
-        // Create a bookstore
-        BookStore store = new BookStore("Amazing Books", "Galway");
-        System.out.println("Created BookStore: " + store);
-        
-        // We'll add serialization code here later
-        System.out.println("Serialization demo initialized!");
-    }
-}
-```
-
-<details>
-<summary>Click to see expected output</summary>
-
-```
-Created BookStore: BookStore{name='Amazing Books', location='Galway'}
-Serialization demo initialized!
-```
-</details>
-
-### 1.3 DIY Task 1: Create Project Structure
-
-Now it's your turn to create a similar structure but for a different type of business:
+### 1.2 DIY Task 1: Create Project Structure
 
 1. Create a package named `ie.atu.serialization`
-2. In this package, create a class named `CoffeeShop` that implements Serializable
-3. Add name, location, and rating fields to the CoffeeShop class
-4. Create a Main class with the following starter code:
+2. Create a Main class with the following starter code:
 
 ```java
 package ie.atu.serialization;
@@ -100,14 +47,12 @@ public class Main {
 ```
 
 5. Run this code to make sure everything is working as expected.
-6. Add toString() method to properly display CoffeeShop details
 
 <details>
 <summary>Click to reveal expected output</summary>
 
 ```
 Hello, Java Serialization!
-CoffeeShop{name='Bean Scene', location='Dublin', rating=4.5}
 ```
 </details>
 

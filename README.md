@@ -101,13 +101,14 @@ public class Book implements Serializable {
                author + "', price=" + price + "}";
     }
 }
-
-// File: BookSerializer.java
+```
+```java
+// File: Main.java
 package ie.atu.serialization.demo;
 
 import java.io.*;
 
-public class BookSerializer {
+public class Main {
     public static void main(String[] args) {
         // Create a book
         Book book = new Book("Java Fundamentals", "John Doe", 29.99);
@@ -156,7 +157,7 @@ Now create your own serialization system for movies:
    - year (int)
    - rating (double)
 
-2. Create a MovieSerializer class that:
+2. In the Main method:
    - Creates a movie object
    - Serializes it to "resources/movie.ser"
    - Deserializes it back
